@@ -1,0 +1,14 @@
+# Render Blueprint: one-click deploy (Dashboard -> New -> Blueprint -> pick this repo)
+services:
+  - type: web
+    name: question-paper-generator
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: OPENAI_API_KEY
+        sync: false   # you are prompted to enter it in the Render dashboard; never committed
