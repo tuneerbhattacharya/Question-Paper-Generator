@@ -2,7 +2,7 @@
 
 Upload any study PDF, describe the exam you want, and get a complete **question paper and answer key**. Before you see anything, an AI agent plans the paper, checks its own evidence, critiques and revises its draft, and verifies every answer against the source pages.
 
-**Live app:** deploying soon on Streamlit Community Cloud
+**Live app:** [question-paper-generator-jrki.onrender.com](https://question-paper-generator-jrki.onrender.com) (free tier: the first load after idle can take about a minute)
 
 **Stack:** LangGraph · LangChain · OpenAI (GPT-4o-mini, text-embedding-3-small) · FAISS · Pydantic · Streamlit · ReportLab · pytest
 
